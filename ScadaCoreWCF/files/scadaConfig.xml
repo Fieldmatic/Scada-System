@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTag xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ScadaCoreWCF.models">
+  <Tag i:type="DigitalInput">
+    <Description>di</Description>
+    <IO_Address>nivoVode</IO_Address>
+    <Id>DI</Id>
+    <Value>0</Value>
+    <Driver>RealTimeDriver</Driver>
+    <ScanOn>false</ScanOn>
+    <ScanTime>2</ScanTime>
+  </Tag>
+  <Tag i:type="AnalogOutput">
+    <Description>AO</Description>
+    <IO_Address>adresica</IO_Address>
+    <Id>AO</Id>
+    <Value>9</Value>
+    <InitialValue>5</InitialValue>
+    <HighLimit>100</HighLimit>
+    <LowLimit>1</LowLimit>
+    <Units>ml</Units>
+  </Tag>
+  <Tag i:type="AnalogInput">
+    <Description>voda</Description>
+    <IO_Address>R</IO_Address>
+    <Id>voda</Id>
+    <Value>18</Value>
+    <Driver>SimDriver</Driver>
+    <ScanOn>true</ScanOn>
+    <ScanTime>3</ScanTime>
+    <Alarms>
+      <Alarm>
+        <Limit>90</Limit>
+        <Name>previseVode</Name>
+        <Priority>2</Priority>
+        <Type>HIGH</Type>
+      </Alarm>
+    </Alarms>
+    <HighLimit>200</HighLimit>
+    <LowLimit>-100</LowLimit>
+    <Units i:nil="true" />
+  </Tag>
+  <Tag i:type="AnalogInput">
+    <Description>tankLevel</Description>
+    <IO_Address>tankLevelRealTime</IO_Address>
+    <Id>tankLevel</Id>
+    <Value>99</Value>
+    <Driver>RealTimeDriver</Driver>
+    <ScanOn>true</ScanOn>
+    <ScanTime>5</ScanTime>
+    <Alarms>
+      <Alarm>
+        <Limit>90</Limit>
+        <Name>previseTank</Name>
+        <Priority>3</Priority>
+        <Type>HIGH</Type>
+      </Alarm>
+    </Alarms>
+    <HighLimit>200</HighLimit>
+    <LowLimit>1</LowLimit>
+    <Units i:nil="true" />
+  </Tag>
+  <Tag i:type="DigitalInput">
+    <Description>dg</Description>
+    <IO_Address>tankLevelRealTime</IO_Address>
+    <Id>digitalniii</Id>
+    <Value>1</Value>
+    <Driver>RealTimeDriver</Driver>
+    <ScanOn>true</ScanOn>
+    <ScanTime>2</ScanTime>
+  </Tag>
+</ArrayOfTag>
